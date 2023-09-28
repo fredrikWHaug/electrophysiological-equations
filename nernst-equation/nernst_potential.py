@@ -1,4 +1,4 @@
-from utils import charge_calculation, nernst_potential
+from utils import charge_calculation, nernst_potential_calculation
 
 if __name__ == '__main__':
 
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     ext_conc = float(input('Extracellular Concentration: '))
     int_conc = float(input('Intracellular concentration: '))
 
-    nernst_potential = nernst_potential(ext_conc, int_conc, charge)
+    nernst_potential = nernst_potential_calculation(ext_conc, int_conc, charge)
 
     print(f'\nNernst potential: {nernst_potential} mV')
     print(f'\nConcentration used in calculattion: ')
