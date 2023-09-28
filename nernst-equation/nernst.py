@@ -1,10 +1,4 @@
-import numpy as np
-from charge_calculation import charge_calculation
-
-# nernst potential helper function declaration
-def nernst_potential(c_out, c_in, z):
-    nernst_potential = (60 / z) * np.log10(c_out/ c_in)
-    return nernst_potential
+from utils import charge_calculation, nernst_potential
 
 if __name__ == '__main__':
 
