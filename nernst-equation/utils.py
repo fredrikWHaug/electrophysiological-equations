@@ -19,10 +19,9 @@ def charge_calculation(ion):
 # nernst potential helper function declaration
 def nernst_potential_calculation(c_out, c_in, z):
     nernst_potential = (60 / z) * np.log10(c_out/ c_in)
-    return nernst_potential
+    return round(nernst_potential, 2)
 
-def membrane_potential_calculation(p_k, p_na, p_cl, c_kout, c_naout, c_clout, c_kin, c_nain, c_clin):
-      v_mem = 60 * np.log10( ( (p_k * c_kout) + (p_na * c_naout) 
-                                           + (p_cl * c_clin) ) / (p_k * c_kin)
-                                           + (p_na * c_nain) + (p_cl * c_clout))
-      return v_mem
+def membrane_potential_calculation(p_k, p_na, p_cl, c_kout, 
+                                   c_naout, c_clout, c_kin, c_nain, c_clin):
+      v_mem = 60 * np.log10( ( (p_k * c_kout) + (p_na * c_naout) + (p_cl * c_clin) ) / ((p_k * c_kin) + (p_na * c_nain) + (p_cl * c_clout)))
+      return round(v_mem, 2)

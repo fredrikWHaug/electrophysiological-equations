@@ -12,7 +12,8 @@ if __name__ == '__main__':
     nernst_potential = nernst_potential_calculation(ext_conc, int_conc, charge)
 
     print(f'\nNernst potential: {nernst_potential} mV')
-    print(f'\nConcentration used in calculattion: ')
+
+    print('Concentration used in calculattion: ')
     print(f'Ion: {ion}')
     print(f'Extracellular concentration: {ext_conc} mM')
     print(f'Intracellular concentration: {int_conc} mM')
