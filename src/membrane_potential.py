@@ -24,8 +24,4 @@ if __name__ == '__main__':
     
     print(f'\nMembrane potential: {membrane_potential} mV')
 
-    # print('\nValues used for calculations:')
-    # print(f'Extracellular potassium concentration: {c_kout}')
-    # print(f'Intracellular potassium concentration: {c_kin}')
-
 
