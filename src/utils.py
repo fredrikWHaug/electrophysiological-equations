@@ -26,3 +26,8 @@ def membrane_potential_calculation(p_k, p_na, p_cl, c_kout,
                                    c_naout, c_clout, c_kin, c_nain, c_clin):
       v_mem = 60 * np.log10( ( (p_k * c_kout) + (p_na * c_naout) + (p_cl * c_clin) ) / ((p_k * c_kin) + (p_na * c_nain) + (p_cl * c_clout)))
       return round(v_mem, 2)
+
+def driving_force(v_mem, e_na, e_k, pos):
+      na_df = np.abs(v_mem - e_na)
+      k_df = np.abs(v_mem - e_k)
+      return (f'''Sodium driving force position {pos} : {na_df}\nPotassium driving force: {k_df}\n''')
